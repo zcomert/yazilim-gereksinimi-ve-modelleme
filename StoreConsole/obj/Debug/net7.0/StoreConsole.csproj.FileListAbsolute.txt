@@ -1,0 +1,15 @@
+C:\MYAZ201\StoreApp\StoreConsole\bin\Debug\net7.0\StoreConsole.exe
+C:\MYAZ201\StoreApp\StoreConsole\bin\Debug\net7.0\StoreConsole.deps.json
+C:\MYAZ201\StoreApp\StoreConsole\bin\Debug\net7.0\StoreConsole.runtimeconfig.json
+C:\MYAZ201\StoreApp\StoreConsole\bin\Debug\net7.0\StoreConsole.dll
+C:\MYAZ201\StoreApp\StoreConsole\bin\Debug\net7.0\StoreConsole.pdb
+C:\MYAZ201\StoreApp\StoreConsole\obj\Debug\net7.0\StoreConsole.csproj.AssemblyReference.cache
+C:\MYAZ201\StoreApp\StoreConsole\obj\Debug\net7.0\StoreConsole.GeneratedMSBuildEditorConfig.editorconfig
+C:\MYAZ201\StoreApp\StoreConsole\obj\Debug\net7.0\StoreConsole.AssemblyInfoInputs.cache
+C:\MYAZ201\StoreApp\StoreConsole\obj\Debug\net7.0\StoreConsole.AssemblyInfo.cs
+C:\MYAZ201\StoreApp\StoreConsole\obj\Debug\net7.0\StoreConsole.csproj.CoreCompileInputs.cache
+C:\MYAZ201\StoreApp\StoreConsole\obj\Debug\net7.0\StoreConsole.dll
+C:\MYAZ201\StoreApp\StoreConsole\obj\Debug\net7.0\refint\StoreConsole.dll
+C:\MYAZ201\StoreApp\StoreConsole\obj\Debug\net7.0\StoreConsole.pdb
+C:\MYAZ201\StoreApp\StoreConsole\obj\Debug\net7.0\StoreConsole.genruntimeconfig.cache
+C:\MYAZ201\StoreApp\StoreConsole\obj\Debug\net7.0\ref\StoreConsole.dll
