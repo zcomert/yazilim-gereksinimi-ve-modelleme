@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "Gu/Jh608hWXQ0Dxue/hWEHcG9TAvJZTEgrVvZG7+8KIJxl4+gu8eEUKPeOBLirNedgPXMBW6nm4F8g5Vh7qkGQ==",
+  "success": true,
+  "projectFilePath": "C:\\myaz201_yazilim\\MYAZ201\\StudentApp\\StudentApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\UZEM\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.1\\microsoft.aspnetcore.openapi.7.0.1.nupkg.sha512",
+    "C:\\Users\\UZEM\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\UZEM\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\UZEM\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\UZEM\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\UZEM\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\UZEM\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
