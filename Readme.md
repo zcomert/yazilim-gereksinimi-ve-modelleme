@@ -26,6 +26,10 @@
 * PUT
 * DELETE
 
+# Referans Eğitimler 
+* [BTK Akademi - ASP.NET Core Web API](https://www.btkakademi.gov.tr/portal/course/asp-net-core-web-api-23993)
+* [Sunumlar](https://github.com/zcomert/BTK-Akademi-ASPNET-Core-Web-Api/tree/master/Presentations)
+
 
 # Örnek ``dotnet`` Komutları
 
