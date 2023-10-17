@@ -25,6 +25,8 @@
 * POST
 * PUT
 * DELETE
+* Postman 
+* Thunder client VS Code Extension
 
 # Referans Eğitimler 
 * [BTK Akademi - ASP.NET Core Web API](https://www.btkakademi.gov.tr/portal/course/asp-net-core-web-api-23993)
