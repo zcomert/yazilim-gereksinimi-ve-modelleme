@@ -7,63 +7,39 @@ namespace StudentApp.Controllers
     [Route("api/students")]
     public class StudentsController : ControllerBase
     {
-        public Student[] StudentList { get; set; }
-        public StudentsController()
+        private readonly ILogger<StudentsController> _logger;
+
+        public StudentsController(ILogger<StudentsController> logger)
         {
-            StudentList = new Student[4];
-            StudentList[0] = new Student()
-            {
-                Number = 112,
-                FirstName = "Hafza",
-                LastName = "Çataklı"
-            };
-
-            var student2 = new Student();
-            student2.Number = 118;
-            student2.FirstName = "Gülbin";
-            student2.LastName = "Beydilli";
-
-            StudentList[1] = student2;
-            StudentList[2] = new Student()
-            {
-                Number = 110,
-                FirstName = "Berat",
-                LastName = "Güngör"
-            };
-            StudentList[3] = new Student()
-            {
-                Number = 911,
-                FirstName = "Celal",
-                LastName = "Halilov"
-            };
+            _logger = logger;
         }
 
         [HttpGet] // localhost/api/students
         public Student[] GetAllStudents()
         {
-            return StudentList;
+            _logger.LogInformation("GetAllStudents has been called.");
+            return null;
         }
 
         [HttpGet("{id}")] // localhost/api/students/{id}
         public Student GetOneStudent(int id)
         {
-            if(id <0 || id>=StudentList.Length)
-            {
-                // return new Student();
-                throw new ArgumentOutOfRangeException($"parameter must be 0 or {StudentList.Length-1}.");
-            }
-            return StudentList[id];
+
+            _logger.LogInformation($"GetOneStudent with id : {id} has been called.");
+            return null;
         }
 
         [HttpPost]
         public Student CreateOneStudent(Student stundent)
         {
+            _logger.LogInformation($"CreateOneStudent has been called.");
             return null;
         }
 
-        [HttpPut]
+        [HttpPut("{id:int}")]
         public Student UpdateOneStudent(int id, Student stundent)
         {
+            _logger.LogInformation($"UpdateOneStudent with id : {id} has been called.");
             return null;
         }
 
@@ -71,6 +47,8 @@ namespace StudentApp.Controllers
         public void DeleteOneStudent(int id, Student stundent)
         {
             //
+            _logger.LogInformation($"DeleteOneStudent with id : {id} has been called.");
+
         }
     }
 }
