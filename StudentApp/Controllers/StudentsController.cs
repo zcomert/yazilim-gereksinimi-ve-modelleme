@@ -55,5 +55,22 @@ namespace StudentApp.Controllers
             return StudentList[id];
         }
 
+        [HttpPost]
+        public Student CreateOneStudent(Student stundent)
+        {
+            return null;
+        }
+
+        [HttpPut]
+        public Student UpdateOneStudent(int id, Student stundent)
+        {
+            return null;
+        }
+
+        [HttpDelete]
+        public void DeleteOneStudent(int id, Student stundent)
+        {
+            //
+        }
     }
 }
