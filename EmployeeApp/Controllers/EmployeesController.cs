@@ -10,46 +10,47 @@ namespace EmployeeApp.Controllers
     {
         public Employee[] EmployeeList { get; set; }
 
-        public EmployeesController()
+        private readonly ILogger<EmployeesController> _logger;
+
+        public EmployeesController(ILogger<EmployeesController> logger)
         {
-            EmployeeList = new Employee[4];
-            EmployeeList[0] = new Employee()
-            {
-                Id = 1,
-                FirstName = "Emine",
-                LastName = "Turan",
-                Company = "Samsun Universitesi"
-            };
-
-            Employee emp2 = new Employee();
-            emp2.Id = 212;
-            emp2.FirstName = "Seher";
-            emp2.LastName = "Emir";
-            emp2.Company = "Samsun Universitesi";
-
-            EmployeeList[1] = emp2;
-            
-            EmployeeList[2] = new Employee()
-            {
-                Id = 101,
-                FirstName = "Abdullah",
-                LastName = "Kapusuz",
-                Company = "Samsun Universitesi"
-            };
-
-            EmployeeList[3] = new Employee()
-            {
-                Id = 301,
-                FirstName = "Cemile",
-                LastName = "Tanrıseven",
-                Company = "Samsun Universitesi"
-            };
+            _logger = logger;
         }
+
 
         [HttpGet] // localhost/api/employees [resource]
         public Employee[] GetAllEmployees()
         {
-            return EmployeeList;
+            _logger.LogInformation("GetAllEmployees has been called.");
+            return null;
+        }
+
+        [HttpGet("{id:int}")]
+        public Employee GetOneEmployee(int id)
+        {
+            _logger.LogInformation($"GetOneEmployee with {id} has been called.");
+            return null;
+        }
+
+
+        [HttpPost] // localhost/api/employees [resource]
+        public void CreateOneEmployee(Employee employee)
+        {
+            _logger.LogInformation($"CreateOneEmployee has been called.");
+
+        }
+
+        [HttpPut("{id:int}")] // localhost/api/employees/{id} [resource]
+        public void UpdateOneEmployee(int id, Employee employee)
+        {
+            _logger.LogInformation($"UpdateOneEmployee with {id} has been called.");
+        }
+
+        [HttpDelete("{id:int}")] // localhost/api/employees/{id} [resource]
+        public void DeleteOneEmployee(int id, Employee employee)
+        {
+            _logger.LogInformation($"DeleteOneEmployee with {id} has been called.");
+            
         }
     }
 }

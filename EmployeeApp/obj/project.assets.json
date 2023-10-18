@@ -465,11 +465,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\MYAZ201\\EmployeeApp\\EmployeeApp.csproj",
+      "projectUniqueName": "C:\\myaz201_yazilim\\MYAZ201\\EmployeeApp\\EmployeeApp.csproj",
       "projectName": "EmployeeApp",
-      "projectPath": "C:\\MYAZ201\\EmployeeApp\\EmployeeApp.csproj",
+      "projectPath": "C:\\myaz201_yazilim\\MYAZ201\\EmployeeApp\\EmployeeApp.csproj",
       "packagesPath": "C:\\Users\\UZEM\\.nuget\\packages\\",
-      "outputPath": "C:\\MYAZ201\\EmployeeApp\\obj\\",
+      "outputPath": "C:\\myaz201_yazilim\\MYAZ201\\EmployeeApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\UZEM\\AppData\\Roaming\\NuGet\\NuGet.Config",
