@@ -19,17 +19,17 @@ namespace EmployeeApp.Controllers
 
 
         [HttpGet] // localhost/api/employees [resource]
-        public Employee[] GetAllEmployees()
+        public List<Employee> GetAllEmployees()
         {
             _logger.LogInformation("GetAllEmployees has been called.");
-            return null;
+            return EmployeeRepository.EmployeeList;
         }
 
         [HttpGet("{id:int}")]
         public Employee GetOneEmployee(int id)
         {
             _logger.LogInformation($"GetOneEmployee with {id} has been called.");
-            return null;
+            return EmployeeRepository.GetOne(id);
         }
 
 
@@ -37,7 +37,7 @@ namespace EmployeeApp.Controllers
         public void CreateOneEmployee(Employee employee)
         {
             _logger.LogInformation($"CreateOneEmployee has been called.");
-
+            EmployeeRepository.Add(employee);
         }
 
         [HttpPut("{id:int}")] // localhost/api/employees/{id} [resource]
