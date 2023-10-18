@@ -15,40 +15,40 @@ namespace StudentApp.Controllers
         }
 
         [HttpGet] // localhost/api/students
-        public Student[] GetAllStudents()
+        public List<Student> GetAllStudents()
         {
             _logger.LogInformation("GetAllStudents has been called.");
-            return null;
+            return StudentRepository.StudentList;
         }
 
         [HttpGet("{id}")] // localhost/api/students/{id}
         public Student GetOneStudent(int id)
         {
-
             _logger.LogInformation($"GetOneStudent with id : {id} has been called.");
-            return null;
+            return StudentRepository.GetOne(id);
         }
 
         [HttpPost]
-        public Student CreateOneStudent(Student stundent)
+        public Student CreateOneStudent(Student student)
         {
             _logger.LogInformation($"CreateOneStudent has been called.");
-            return null;
+            return StudentRepository.CreateOne(student);
         }
 
         [HttpPut("{id:int}")]
-        public Student UpdateOneStudent(int id, Student stundent)
+        public Student UpdateOneStudent(int id, Student student)
         {
             _logger.LogInformation($"UpdateOneStudent with id : {id} has been called.");
-            return null;
+            StudentRepository.UpdateOne(id,student);
+            return GetOneStudent(id);
         }
 
-        [HttpDelete]
-        public void DeleteOneStudent(int id, Student stundent)
+        [HttpDelete("{id:int}")]
+        public void DeleteOneStudent(int id)
         {
             //
             _logger.LogInformation($"DeleteOneStudent with id : {id} has been called.");
-
+            StudentRepository.DeleteOne(id);
         }
     }
 }
