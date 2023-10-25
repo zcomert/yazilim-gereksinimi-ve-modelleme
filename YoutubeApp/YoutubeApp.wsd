@@ -1,0 +1,26 @@
+@startuml YoutubeApp
+title YoutubeApp
+
+class VideoRepository
+{
+    -playList:List<Video>
+    +CreateOneVideo(video:Video):void
+    +GetAllVideos():List<Video>
+    +GetOneVideo(id:int):Video
+    +UpdateOneVideo(id:int, video:Video):void
+    +DeleteOneVideo(id:int):void
+}
+
+class Video {
+    id:int
+    title:string
+    duration:double
+    category: Category
+}
+class Category{
+    categoryId:int
+    categoryName:string
+}
+Category "1" - "*" Video 
+hide empty members
+@enduml
