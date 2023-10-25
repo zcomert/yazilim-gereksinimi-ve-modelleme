@@ -25,8 +25,11 @@
 * POST
 * PUT
 * DELETE
-* Postman 
-* Thunder client VS Code Extension
+
+# Hafta 04 
+
+* Dependency Injection
+* Inversion of Control
 
 # Referans Eğitimler 
 * [BTK Akademi - ASP.NET Core Web API](https://www.btkakademi.gov.tr/portal/course/asp-net-core-web-api-23993)
