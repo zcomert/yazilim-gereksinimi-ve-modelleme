@@ -1,0 +1,16 @@
+@startuml Models
+class Posts{
+    Id: int
+    Title: String
+    PostDate: DateTime
+    Tag: Tags
+    Location: String
+}
+
+class Tags{
+    Id: int
+    TagName: string
+}
+
+Posts - Tags
+@enduml
