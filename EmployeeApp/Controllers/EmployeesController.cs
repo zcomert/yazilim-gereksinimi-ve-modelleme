@@ -11,10 +11,13 @@ namespace EmployeeApp.Controllers
         public Employee[] EmployeeList { get; set; }
 
         private readonly ILogger<EmployeesController> _logger;
+        private readonly EmployeeRepository _employeeRepository;
 
-        public EmployeesController(ILogger<EmployeesController> logger)
+        public EmployeesController(ILogger<EmployeesController> logger, 
+        EmployeeRepository employeeRepository)
         {
             _logger = logger;
+            _employeeRepository = employeeRepository; // Resolve
         }
 
 
@@ -22,14 +25,14 @@ namespace EmployeeApp.Controllers
         public List<Employee> GetAllEmployees()
         {
             _logger.LogInformation("GetAllEmployees has been called.");
-            return EmployeeRepository.EmployeeList;
+            return employeeRepository.EmployeeList;
         }
 
         [HttpGet("{id:int}")]
         public Employee GetOneEmployee(int id)
         {
             _logger.LogInformation($"GetOneEmployee with {id} has been called.");
-            return EmployeeRepository.GetOne(id);
+            return employeeRepository.GetOne(id);
         }
 
 
@@ -37,7 +40,7 @@ namespace EmployeeApp.Controllers
         public void CreateOneEmployee(Employee employee)
         {
             _logger.LogInformation($"CreateOneEmployee has been called.");
-            EmployeeRepository.Add(employee);
+            employeeRepository.Add(employee);
         }
 
         [HttpPut("{id:int}")] // localhost/api/employees/{id} [resource]

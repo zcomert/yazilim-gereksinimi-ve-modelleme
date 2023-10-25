@@ -2,10 +2,10 @@ using Microsoft.AspNetCore.Server.IIS.Core;
 
 namespace EmployeeApp.Models
 {
-    public static class EmployeeRepository
+    public class EmployeeRepository
     {
-        public static List<Employee> EmployeeList { get; set; }
-        static EmployeeRepository()
+        public List<Employee> EmployeeList { get; set; }
+        public EmployeeRepository()
         {
             EmployeeList = new List<Employee>();
             EmployeeList.Add(new Employee(){Id=1, FirstName="Ahmet",LastName="Güneş"});
@@ -13,7 +13,7 @@ namespace EmployeeApp.Models
             EmployeeList.Add(new Employee(){Id=3, FirstName="Merve",LastName="Yıldız"});
         }
 
-        public static Employee GetOne(int id)
+        public Employee GetOne(int id)
         {
             foreach (var emp in EmployeeList)
             {
@@ -25,7 +25,7 @@ namespace EmployeeApp.Models
             throw new Exception("Not found!");
         }
 
-        public static void Add(Employee employee)
+        public void Add(Employee employee)
         {
             EmployeeList.Add(employee);
         }
