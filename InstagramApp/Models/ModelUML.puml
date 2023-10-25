@@ -12,5 +12,15 @@ class Tags{
     TagName: string
 }
 
+class PostsRepository{
+    - postList: List<Posts>
+    + GetAllPosts(): List<Posts>
+    + GetOnePost(id:int): Posts
+    + CreateOnePost(post: Posts): void
+    + UpdateOnePost(id: int, post: Post): void
+    + DeleteOnePost(id: int): void
+    + DeleteAllPosts(): void
+}
+
 Posts - Tags
 @enduml
