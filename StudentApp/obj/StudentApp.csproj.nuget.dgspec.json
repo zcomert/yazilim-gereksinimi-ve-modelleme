@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\myaz201_yazilim\\MYAZ201\\StudentApp\\StudentApp.csproj": {}
+    "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\StudentApp\\StudentApp.csproj": {}
   },
   "projects": {
-    "C:\\myaz201_yazilim\\MYAZ201\\StudentApp\\StudentApp.csproj": {
+    "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\StudentApp\\StudentApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\myaz201_yazilim\\MYAZ201\\StudentApp\\StudentApp.csproj",
+        "projectUniqueName": "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\StudentApp\\StudentApp.csproj",
         "projectName": "StudentApp",
-        "projectPath": "C:\\myaz201_yazilim\\MYAZ201\\StudentApp\\StudentApp.csproj",
-        "packagesPath": "C:\\Users\\UZEM\\.nuget\\packages\\",
-        "outputPath": "C:\\myaz201_yazilim\\MYAZ201\\StudentApp\\obj\\",
+        "projectPath": "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\StudentApp\\StudentApp.csproj",
+        "packagesPath": "C:\\Users\\PREDATOR\\.nuget\\packages\\",
+        "outputPath": "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\StudentApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\UZEM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PREDATOR\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -46,7 +46,7 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[6.2.3, )"
             }
           },
           "imports": [
@@ -68,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

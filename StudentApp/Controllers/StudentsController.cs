@@ -8,38 +8,40 @@ namespace StudentApp.Controllers
     public class StudentsController : ControllerBase
     {
         private readonly ILogger<StudentsController> _logger;
+        private readonly StudentRepository studentRepository;
 
-        public StudentsController(ILogger<StudentsController> logger)
+        public StudentsController(ILogger<StudentsController> logger, StudentRepository studentRepository)
         {
             _logger = logger;
+            this.studentRepository = studentRepository;
         }
 
         [HttpGet] // localhost/api/students
         public List<Student> GetAllStudents()
         {
             _logger.LogInformation("GetAllStudents has been called.");
-            return StudentRepository.StudentList;
+            return studentRepository.GetAll();
         }
 
         [HttpGet("{id}")] // localhost/api/students/{id}
         public Student GetOneStudent(int id)
         {
             _logger.LogInformation($"GetOneStudent with id : {id} has been called.");
-            return StudentRepository.GetOne(id);
+            return studentRepository.GetOne(id);
         }
 
         [HttpPost]
         public Student CreateOneStudent(Student student)
         {
             _logger.LogInformation($"CreateOneStudent has been called.");
-            return StudentRepository.CreateOne(student);
+            return studentRepository.CreateOne(student);
         }
 
         [HttpPut("{id:int}")]
         public Student UpdateOneStudent(int id, Student student)
         {
             _logger.LogInformation($"UpdateOneStudent with id : {id} has been called.");
-            StudentRepository.UpdateOne(id,student);
+            studentRepository.UpdateOne(id,student);
             return GetOneStudent(id);
         }
 
@@ -48,7 +50,7 @@ namespace StudentApp.Controllers
         {
             //
             _logger.LogInformation($"DeleteOneStudent with id : {id} has been called.");
-            StudentRepository.DeleteOne(id);
+            studentRepository.DeleteOne(id);
         }
     }
 }
