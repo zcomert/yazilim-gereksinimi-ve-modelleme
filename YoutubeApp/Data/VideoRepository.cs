@@ -50,14 +50,24 @@ public class VideoRepository
     }
     public void CreateOneVideo(Video video)
     {
-        throw new NotImplementedException();
+        playList.Add(video);
     }
     public void UpdateOneVideo(int id, Video video)
     {
-        throw new NotImplementedException();
+        foreach (var item in playList)
+        {
+            if(item.Id.Equals(id))
+            {
+                item.Title = video.Title;
+                item.Duration = video.Duration;
+                item.Category = video.Category;
+                return;
+            }
+        }
     }
     public void Delete(int id)
     {
-        throw new NotImplementedException();
+        var video = GetOneVideo(id);
+        playList.Remove(video);
     }
 }
