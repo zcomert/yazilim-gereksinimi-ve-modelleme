@@ -45,7 +45,7 @@ namespace StudentApp.Models
             return student;
         }
 
-        public void UpdateOneStudent(int id, Student student)
+        public int UpdateOneStudent(int id, Student student)
         {
             foreach (var item in StudentList)
             {
@@ -54,16 +54,21 @@ namespace StudentApp.Models
                     item.FirstName = student.FirstName;
                     item.LastName = student.LastName;
                     item.Number = student.Number;
-                    return;
+                    return 1;
                 }
             }
-            throw new Exception("Not found");
+            return 0;
         }
 
-        public void DeleteOneStudent(int id)
+        public int DeleteOneStudent(int id)
         {
-            var std = GetOneStudent(id);
-            StudentList.Remove(std);
+            var std = GetOneStudent(id); // Student : null
+            if (std != null)
+            {
+                StudentList.Remove(std);
+                return 1;
+            }
+            return 0;
         }
     }
 }

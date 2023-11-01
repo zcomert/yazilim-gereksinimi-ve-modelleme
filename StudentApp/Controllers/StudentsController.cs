@@ -32,26 +32,29 @@ namespace StudentApp.Controllers
         }
 
         [HttpPost]
-        public Student CreateOneStudent(Student student)
+        public IActionResult CreateOneStudent(Student student)
         {
             _logger.LogInformation($"CreateOneStudent has been called.");
-            return studentRepository.CreateOneStudent(student);
+            var result = studentRepository.CreateOneStudent(student);
+            return result == null ? BadRequest("This student already created!") : Ok(result);
         }
 
         [HttpPut("{id:int}")]
-        public IActionResult UpdateOneStudent(int id, Student student)
+        public IActionResult UpdateOneStudent([FromRoute] int id, [FromBody] Student student)
         {
             _logger.LogInformation($"UpdateOneStudent with id : {id} has been called.");
-            studentRepository.UpdateOneStudent(id, student);
-            return GetOneStudent(id);
+            var result = studentRepository.UpdateOneStudent(id, student);
+            return result == 0 ? NotFound("Student not found!") : Ok(GetOneStudent(student.Number));
         }
 
         [HttpDelete("{id:int}")]
-        public void DeleteOneStudent(int id)
+        public IActionResult DeleteOneStudent(int id)
         {
             //
             _logger.LogInformation($"DeleteOneStudent with id : {id} has been called.");
-            studentRepository.DeleteOneStudent(id);
+            var result = studentRepository.DeleteOneStudent(id);
+            return result == 0 ? NotFound("This student not found!")
+            : Ok("Student information deleted!");
         }
     }
 }
