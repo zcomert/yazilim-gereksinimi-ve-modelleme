@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\myaz201_yazilim\\MYAZ201\\YoutubeApp\\YoutubeApp.csproj": {}
+    "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\YoutubeApp\\YoutubeApp.csproj": {}
   },
   "projects": {
-    "C:\\myaz201_yazilim\\MYAZ201\\YoutubeApp\\YoutubeApp.csproj": {
+    "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\YoutubeApp\\YoutubeApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\myaz201_yazilim\\MYAZ201\\YoutubeApp\\YoutubeApp.csproj",
+        "projectUniqueName": "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\YoutubeApp\\YoutubeApp.csproj",
         "projectName": "YoutubeApp",
-        "projectPath": "C:\\myaz201_yazilim\\MYAZ201\\YoutubeApp\\YoutubeApp.csproj",
-        "packagesPath": "C:\\Users\\UZEM\\.nuget\\packages\\",
-        "outputPath": "C:\\myaz201_yazilim\\MYAZ201\\YoutubeApp\\obj\\",
+        "projectPath": "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\YoutubeApp\\YoutubeApp.csproj",
+        "packagesPath": "C:\\Users\\PREDATOR\\.nuget\\packages\\",
+        "outputPath": "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\YoutubeApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\UZEM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PREDATOR\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -68,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

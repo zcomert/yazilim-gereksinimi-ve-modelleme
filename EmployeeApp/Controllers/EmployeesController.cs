@@ -13,7 +13,7 @@ namespace EmployeeApp.Controllers
         private readonly ILogger<EmployeesController> _logger;
         private readonly EmployeeRepository _employeeRepository;
 
-        public EmployeesController(ILogger<EmployeesController> logger, 
+        public EmployeesController(ILogger<EmployeesController> logger,
         EmployeeRepository employeeRepository)
         {
             _logger = logger;
@@ -22,38 +22,46 @@ namespace EmployeeApp.Controllers
 
 
         [HttpGet] // localhost/api/employees [resource]
-        public List<Employee> GetAllEmployees()
+        public IActionResult GetAllEmployees()
         {
             _logger.LogInformation("GetAllEmployees has been called.");
-            return employeeRepository.EmployeeList;
+            return Ok(_employeeRepository.GetAllEmployee());
         }
 
         [HttpGet("{id:int}")]
-        public Employee GetOneEmployee(int id)
+        public IActionResult GetOneEmployee(int id)
         {
             _logger.LogInformation($"GetOneEmployee with {id} has been called.");
-            return employeeRepository.GetOne(id);
+            var result = _employeeRepository.GetOneEmployee(id);
+            return (result != null ? Ok(result) : NotFound());
         }
 
 
         [HttpPost] // localhost/api/employees [resource]
-        public void CreateOneEmployee(Employee employee)
+        public IActionResult CreateOneEmployee(Employee employee)
         {
             _logger.LogInformation($"CreateOneEmployee has been called.");
-            employeeRepository.Add(employee);
+            var result = _employeeRepository.AddEmployee(employee);
+            return result == 0 ? BadRequest("Employee already in the list!")
+            : Ok("Add operation successful!");
         }
 
         [HttpPut("{id:int}")] // localhost/api/employees/{id} [resource]
-        public void UpdateOneEmployee(int id, Employee employee)
+        public IActionResult UpdateOneEmployee(int id, Employee employee)
         {
             _logger.LogInformation($"UpdateOneEmployee with {id} has been called.");
+            var result = _employeeRepository.UpdateEmployee(id, employee);
+            return result == 0 ? NotFound("Employee not found!") : Ok("Employee successfully updated!");
         }
 
         [HttpDelete("{id:int}")] // localhost/api/employees/{id} [resource]
-        public void DeleteOneEmployee(int id, Employee employee)
+        public IActionResult DeleteOneEmployee([FromRoute] int id)
         {
             _logger.LogInformation($"DeleteOneEmployee with {id} has been called.");
-            
+            var result = _employeeRepository.DeleteOneEmployee(id);
+            return result == 0 ? NotFound("Employee not found!") : Ok("Employee successfully deleted!");
+
+
         }
     }
 }
