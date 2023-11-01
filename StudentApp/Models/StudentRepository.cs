@@ -12,8 +12,9 @@ namespace StudentApp.Models
         }
 
         // CRUD
-        public Student GetOne(int id)
+        public Student GetOneStudent(int id)
         {
+            /*
             foreach (var std in StudentList)
             {
                 if (std.Number.Equals(id))
@@ -21,27 +22,30 @@ namespace StudentApp.Models
                     return std;
                 }
             }
-            throw new Exception("Not found!");
+            throw new Exception("Not found!");*/
+            var result = StudentList
+            .Where(std => std.Number.Equals(id))
+            .SingleOrDefault();
+            return result;
         }
-        
-        public List<Student> GetAll()
+
+        public List<Student> GetAllStudent()
         {
             return StudentList;
         }
 
-        public void DeleteOne(int id)
+        public Student CreateOneStudent(Student student)
         {
-            var std = GetOne(id);
-            StudentList.Remove(std);
-        }
-
-        public Student CreateOne(Student student)
-        {
+            var result = StudentList
+            .Where(std => std.Number.Equals(student.Number))
+            .SingleOrDefault();
+            if (result != null)
+                return null;
             StudentList.Add(student);
             return student;
         }
 
-        public void UpdateOne(int id, Student student)
+        public void UpdateOneStudent(int id, Student student)
         {
             foreach (var item in StudentList)
             {
@@ -54,6 +58,12 @@ namespace StudentApp.Models
                 }
             }
             throw new Exception("Not found");
+        }
+
+        public void DeleteOneStudent(int id)
+        {
+            var std = GetOneStudent(id);
+            StudentList.Remove(std);
         }
     }
 }

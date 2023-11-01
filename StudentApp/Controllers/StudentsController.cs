@@ -17,31 +17,32 @@ namespace StudentApp.Controllers
         }
 
         [HttpGet] // localhost/api/students
-        public List<Student> GetAllStudents()
+        public IActionResult GetAllStudents()
         {
             _logger.LogInformation("GetAllStudents has been called.");
-            return studentRepository.GetAll();
+            return Ok(studentRepository.GetAllStudent());
         }
 
         [HttpGet("{id}")] // localhost/api/students/{id}
-        public Student GetOneStudent(int id)
+        public IActionResult GetOneStudent(int id)
         {
             _logger.LogInformation($"GetOneStudent with id : {id} has been called.");
-            return studentRepository.GetOne(id);
+            var result = studentRepository.GetOneStudent(id);
+            return result != null ? Ok(result) : NotFound();
         }
 
         [HttpPost]
         public Student CreateOneStudent(Student student)
         {
             _logger.LogInformation($"CreateOneStudent has been called.");
-            return studentRepository.CreateOne(student);
+            return studentRepository.CreateOneStudent(student);
         }
 
         [HttpPut("{id:int}")]
-        public Student UpdateOneStudent(int id, Student student)
+        public IActionResult UpdateOneStudent(int id, Student student)
         {
             _logger.LogInformation($"UpdateOneStudent with id : {id} has been called.");
-            studentRepository.UpdateOne(id,student);
+            studentRepository.UpdateOneStudent(id, student);
             return GetOneStudent(id);
         }
 
@@ -50,7 +51,7 @@ namespace StudentApp.Controllers
         {
             //
             _logger.LogInformation($"DeleteOneStudent with id : {id} has been called.");
-            studentRepository.DeleteOne(id);
+            studentRepository.DeleteOneStudent(id);
         }
     }
 }
