@@ -27,11 +27,19 @@ public class EmployeeRepository
 
     public Employee GetOneEmployee(int id)
     {
-        var employee = _employees.Single(e => e.Id.Equals(id));
+        try
+        {
+            var employee = _employees
+            .SingleOrDefault(e => e.Id.Equals(id));
 
-        if (employee is null)
-            throw new EmployeeNotFoundException(id);
+            if (employee is null)
+                throw new EmployeeNotFoundException(id);
 
-        return employee;
+            return employee;
+        }
+        catch (Exception ex)
+        {
+            throw new Exception(ex.Message);
+        }
     }
 }
