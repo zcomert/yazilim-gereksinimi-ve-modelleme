@@ -1,0 +1,30 @@
+@startuml
+
+class Product{
+
+}
+
+class ProductRepository{
+    - _products:List<Product>
+    + add(item:Product)
+    + getAllProducts():List<Product>
+    + getOneProduct(id:int):Product
+}
+
+class ProductsController extends ControllerBase
+{
+    
+}
+
+abstract class NotFoundException extends Exception
+{
+
+}
+
+class ProductNotFoundException extends NotFoundException
+{
+    
+}
+
+hide empty members
+@enduml
