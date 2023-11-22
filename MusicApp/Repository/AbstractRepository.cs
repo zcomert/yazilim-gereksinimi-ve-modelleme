@@ -2,7 +2,7 @@ using System.Collections;
 
 public abstract class AbstractRepository<T> : IRepositoryMethods<T>
 {
-    private List<T> list;
+    protected List<T> list;
 
     public AbstractRepository()
     {
@@ -21,7 +21,7 @@ public abstract class AbstractRepository<T> : IRepositoryMethods<T>
 
     public abstract void DeleteOne(int id);
 
-    public List<T> GetAll(int id)
+    public List<T> GetAll()
     {
         return list;
     }

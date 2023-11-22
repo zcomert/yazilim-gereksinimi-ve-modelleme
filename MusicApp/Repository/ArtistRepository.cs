@@ -1,4 +1,4 @@
-public class MusicRepository : AbstractRepository<Musics>
+public class ArtistRepository : AbstractRepository<Artists>
 {
     public override void DeleteOne(int id)
     {
@@ -6,12 +6,12 @@ public class MusicRepository : AbstractRepository<Musics>
         list.Remove(music);
     }
 
-    public override Musics GetOne(int id)
+    public override Artists GetOne(int id)
     {
         return list.Where(music => music.Id.Equals(id)).SingleOrDefault();
     }
 
-    public override void Update(int id, Musics item)
+    public override void Update(int id, Artists item)
     {
         for (int i = 0; i < list.Count; i++)
         {
