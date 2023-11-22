@@ -44,6 +44,8 @@ interface IRepositoryMethods {
     + DeleteAll(): void
 }
 
+abstract AbstractRepository {}
+
 class MusicRepository{}
 class ArtistRepository{}
 class AlbumRepository{}
@@ -53,9 +55,10 @@ interface IEnumerable {}
 hide empty fields
 hide empty methods
 
-MusicRepository -up-|> IRepositoryMethods
-AlbumRepository -up-|> IRepositoryMethods
-ArtistRepository -up-|> IRepositoryMethods
+MusicRepository -up-|> AbstractRepository
+AlbumRepository -up-|> AbstractRepository
+ArtistRepository -up-|> AbstractRepository
+AbstractRepository -up-|> IRepositoryMethods
 IRepositoryMethods -up-|> IEnumerable
 
 Artists -right- Musics

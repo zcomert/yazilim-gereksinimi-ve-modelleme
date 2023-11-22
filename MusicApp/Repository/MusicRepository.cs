@@ -1,42 +1,17 @@
-using System.Collections;
-
-public abstract class AbstractRepository<T> : IRepositoryMethods<T>
+public class MusicRepository : AbstractRepository<Musics>
 {
-    private List<T> list;
-
-    public AbstractRepository()
+    public override void DeleteOne(int id)
     {
-        list = new List<T>();
+        throw new NotImplementedException();
     }
 
-    public void Create(T item)
+    public override Musics GetOne(int id)
     {
-        list.Add(item);
+        throw new NotImplementedException();
     }
 
-    public void DeleteAll()
+    public override void Update(int id, Musics item)
     {
-        list.Clear();
-    }
-
-    public abstract void DeleteOne(int id);
-
-    public List<T> GetAll(int id)
-    {
-        return list;
-    }
-
-    public abstract T GetOne(int id);
-
-    public abstract void Update(int id, T item);
-
-    public IEnumerator<T> GetEnumerator()
-    {
-        return list.GetEnumerator();
-    }
-
-    IEnumerator IEnumerable.GetEnumerator()
-    {
-        return GetEnumerator();
+        throw new NotImplementedException();
     }
 }
