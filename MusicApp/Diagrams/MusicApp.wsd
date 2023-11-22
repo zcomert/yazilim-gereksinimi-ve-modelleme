@@ -1,0 +1,40 @@
+    @startuml MusicApp
+class Musics {
+    + Id: int
+    + Title: string
+    + Album: Albums
+    + Artist: Artists
+    + Genre: string
+    + PublishDate: DateTime
+    + View: decimal
+    + Music()
+    + Music(id, title, album, artist, genre, publishDate, view)
+}
+
+class Artists {
+    + Id: int
+    + Name: string
+    + Artists()
+    + Artists(id, name)
+}
+
+class Albums {
+    + Id: int
+    + Title: string
+    + Albums()
+    + Albums(id, title)
+}
+
+class Users {
+    + Id: int
+    + Name: string
+    + Email: string
+    + Password: string
+    + LikedMusic: List<Musics>
+    + Users()
+    + Users(id, name, email, password, likedMusic)
+}
+
+Artists -right- Musics
+Albums -left- Musics
+@enduml

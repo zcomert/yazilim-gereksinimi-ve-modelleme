@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\demo\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\ErrorHandleApp\\ErrorHandleApp.csproj": {}
+    "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\ErrorHandleApp\\ErrorHandleApp.csproj": {}
   },
   "projects": {
-    "F:\\demo\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\ErrorHandleApp\\ErrorHandleApp.csproj": {
+    "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\ErrorHandleApp\\ErrorHandleApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\demo\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\ErrorHandleApp\\ErrorHandleApp.csproj",
+        "projectUniqueName": "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\ErrorHandleApp\\ErrorHandleApp.csproj",
         "projectName": "ErrorHandleApp",
-        "projectPath": "F:\\demo\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\ErrorHandleApp\\ErrorHandleApp.csproj",
-        "packagesPath": "C:\\Users\\zafer\\.nuget\\packages\\",
-        "outputPath": "F:\\demo\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\ErrorHandleApp\\obj\\",
+        "projectPath": "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\ErrorHandleApp\\ErrorHandleApp.csproj",
+        "packagesPath": "C:\\Users\\PREDATOR\\.nuget\\packages\\",
+        "outputPath": "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\ErrorHandleApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\zafer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PREDATOR\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -69,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

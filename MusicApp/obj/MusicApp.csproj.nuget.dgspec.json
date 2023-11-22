@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\StoreApi\\StoreApi.csproj": {}
+    "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\MusicApp\\MusicApp.csproj": {}
   },
   "projects": {
-    "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\StoreApi\\StoreApi.csproj": {
+    "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\MusicApp\\MusicApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\StoreApi\\StoreApi.csproj",
-        "projectName": "StoreApi",
-        "projectPath": "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\StoreApi\\StoreApi.csproj",
+        "projectUniqueName": "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\MusicApp\\MusicApp.csproj",
+        "projectName": "MusicApp",
+        "projectPath": "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\MusicApp\\MusicApp.csproj",
         "packagesPath": "C:\\Users\\PREDATOR\\.nuget\\packages\\",
-        "outputPath": "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\StoreApi\\obj\\",
+        "outputPath": "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\MusicApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PREDATOR\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -42,11 +42,11 @@
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[7.0.1, )"
+              "version": "[7.0.11, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[6.5.0, )"
             }
           },
           "imports": [

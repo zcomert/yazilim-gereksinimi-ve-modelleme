@@ -460,19 +460,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\UZEM\\.nuget\\packages\\": {}
+    "C:\\Users\\PREDATOR\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\MYAZ201\\StoreApp\\StoreApi\\StoreApi.csproj",
+      "projectUniqueName": "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\StoreApi\\StoreApi.csproj",
       "projectName": "StoreApi",
-      "projectPath": "C:\\MYAZ201\\StoreApp\\StoreApi\\StoreApi.csproj",
-      "packagesPath": "C:\\Users\\UZEM\\.nuget\\packages\\",
-      "outputPath": "C:\\MYAZ201\\StoreApp\\StoreApi\\obj\\",
+      "projectPath": "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\StoreApi\\StoreApi.csproj",
+      "packagesPath": "C:\\Users\\PREDATOR\\.nuget\\packages\\",
+      "outputPath": "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\StoreApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\UZEM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\PREDATOR\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -526,7 +526,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
