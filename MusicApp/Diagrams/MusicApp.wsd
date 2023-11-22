@@ -1,4 +1,4 @@
-    @startuml MusicApp
+@startuml MusicApp
 class Musics {
     + Id: int
     + Title: string
@@ -34,6 +34,29 @@ class Users {
     + Users()
     + Users(id, name, email, password, likedMusic)
 }
+
+interface IRepositoryMethods {
+    + GetOne(id: int): T
+    + GetAll(): List<T>
+    + Create(item: T): void
+    + Update(id: int, item: T): void
+    + DeleteOne(id: int): void
+    + DeleteAll(): void
+}
+
+class MusicRepository{}
+class ArtistRepository{}
+class AlbumRepository{}
+
+interface IEnumerable {}
+
+hide empty fields
+hide empty methods
+
+MusicRepository -up-|> IRepositoryMethods
+AlbumRepository -up-|> IRepositoryMethods
+ArtistRepository -up-|> IRepositoryMethods
+IRepositoryMethods -up-|> IEnumerable
 
 Artists -right- Musics
 Albums -left- Musics
