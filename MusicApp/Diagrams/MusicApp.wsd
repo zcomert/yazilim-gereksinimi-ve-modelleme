@@ -47,8 +47,6 @@ interface IRepositoryMethods {
 abstract AbstractRepository {}
 
 class MusicRepository{}
-class ArtistRepository{}
-class AlbumRepository{}
 
 interface IEnumerable {}
 
@@ -56,8 +54,6 @@ hide empty fields
 hide empty methods
 
 MusicRepository -up-|> AbstractRepository
-AlbumRepository -up-|> AbstractRepository
-ArtistRepository -up-|> AbstractRepository
 AbstractRepository -up-|> IRepositoryMethods
 IRepositoryMethods -up-|> IEnumerable
 

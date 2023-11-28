@@ -1,26 +1,57 @@
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
 [Route("musics")]
 public class MusicsController : ControllerBase
 {
-    private MusicRepository musics;
+    private IRepositoryMethods<Musics> musicRepository;
 
-    public MusicsController()
+    public MusicsController(MusicRepository musicRepository)
     {
-        musics = new MusicRepository();
+        this.musicRepository = musicRepository;
     }
 
     [HttpGet]
-    public List<Musics> GetAll()
+    public ActionResult<List<Musics>> GetAll()
     {
-        return musics.GetAll();
+        return Ok(musicRepository.GetAll());
     }
 
-    [HttpGet("id")]
-    public Musics GetOne(int id)
+    [HttpGet("{id}")]
+    public ActionResult<Musics> GetOne(int id)
     {
-        return musics.GetOne(id);
+        var result = musicRepository.GetOne(id);
+        if (result != null)
+            return Ok(result);
+        return NotFound("Music not found!");
     }
 
+    [HttpPost]
+    public ActionResult CreateMusic(Musics music)
+    {
+        musicRepository.Create(music);
+        return Ok("New music created!");
+    }
+
+    [HttpPut("{id}")]
+    public ActionResult Update(int id, Musics music)
+    {
+        musicRepository.Update(id, music);
+        return Ok("Music updated!");
+    }
+
+    [HttpDelete]
+    public ActionResult DeleteAll()
+    {
+        musicRepository.DeleteAll();
+        return Ok("All music list deleted!");
+    }
+
+    [HttpDelete("{id}")]
+    public ActionResult DeleteOne(int id)
+    {
+        musicRepository.DeleteOne(id);
+        return Ok("Music is deleted!");
+    }
 }

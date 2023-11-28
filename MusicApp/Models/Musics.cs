@@ -1,10 +1,10 @@
 public class Musics
 {
     public int Id { get; set; }
-    public string Title { get; set; }
-    public Albums Album { get; set; }
-    public Artists Artist { get; set; }
-    public string Genre { get; set; }
+    public string? Title { get; set; }
+    public Albums? Album { get; set; }
+    public Artists? Artist { get; set; }
+    public string? Genre { get; set; }
     public DateTime PublishDate { get; set; }
     public decimal View { get; set; }
 

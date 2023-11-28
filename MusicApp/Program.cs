@@ -8,8 +8,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<MusicRepository>();
-builder.Services.AddSingleton<ArtistRepository>();
-builder.Services.AddSingleton<AlbumRepository>();
 
 var app = builder.Build();
 
