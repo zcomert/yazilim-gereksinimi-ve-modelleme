@@ -1,0 +1,17 @@
+C:\myaz201_yazilim\MYAZ201\Appwithdb\Repositories\bin\Debug\net7.0\Repositories.deps.json
+C:\myaz201_yazilim\MYAZ201\Appwithdb\Repositories\bin\Debug\net7.0\Repositories.runtimeconfig.json
+C:\myaz201_yazilim\MYAZ201\Appwithdb\Repositories\bin\Debug\net7.0\Repositories.dll
+C:\myaz201_yazilim\MYAZ201\Appwithdb\Repositories\bin\Debug\net7.0\Repositories.pdb
+C:\myaz201_yazilim\MYAZ201\Appwithdb\Repositories\bin\Debug\net7.0\Entities.dll
+C:\myaz201_yazilim\MYAZ201\Appwithdb\Repositories\bin\Debug\net7.0\Entities.pdb
+C:\myaz201_yazilim\MYAZ201\Appwithdb\Repositories\obj\Debug\net7.0\Repositories.csproj.AssemblyReference.cache
+C:\myaz201_yazilim\MYAZ201\Appwithdb\Repositories\obj\Debug\net7.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\myaz201_yazilim\MYAZ201\Appwithdb\Repositories\obj\Debug\net7.0\Repositories.AssemblyInfoInputs.cache
+C:\myaz201_yazilim\MYAZ201\Appwithdb\Repositories\obj\Debug\net7.0\Repositories.AssemblyInfo.cs
+C:\myaz201_yazilim\MYAZ201\Appwithdb\Repositories\obj\Debug\net7.0\Repositories.csproj.CoreCompileInputs.cache
+C:\myaz201_yazilim\MYAZ201\Appwithdb\Repositories\obj\Debug\net7.0\Repositories.csproj.CopyComplete
+C:\myaz201_yazilim\MYAZ201\Appwithdb\Repositories\obj\Debug\net7.0\Repositories.dll
+C:\myaz201_yazilim\MYAZ201\Appwithdb\Repositories\obj\Debug\net7.0\refint\Repositories.dll
+C:\myaz201_yazilim\MYAZ201\Appwithdb\Repositories\obj\Debug\net7.0\Repositories.pdb
+C:\myaz201_yazilim\MYAZ201\Appwithdb\Repositories\obj\Debug\net7.0\Repositories.genruntimeconfig.cache
+C:\myaz201_yazilim\MYAZ201\Appwithdb\Repositories\obj\Debug\net7.0\ref\Repositories.dll

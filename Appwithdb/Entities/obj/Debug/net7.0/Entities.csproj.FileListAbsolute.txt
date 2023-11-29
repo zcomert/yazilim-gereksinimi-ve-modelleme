@@ -1,0 +1,12 @@
+C:\myaz201_yazilim\MYAZ201\Appwithdb\Entities\bin\Debug\net7.0\Entities.deps.json
+C:\myaz201_yazilim\MYAZ201\Appwithdb\Entities\bin\Debug\net7.0\Entities.dll
+C:\myaz201_yazilim\MYAZ201\Appwithdb\Entities\bin\Debug\net7.0\Entities.pdb
+C:\myaz201_yazilim\MYAZ201\Appwithdb\Entities\obj\Debug\net7.0\Entities.csproj.AssemblyReference.cache
+C:\myaz201_yazilim\MYAZ201\Appwithdb\Entities\obj\Debug\net7.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\myaz201_yazilim\MYAZ201\Appwithdb\Entities\obj\Debug\net7.0\Entities.AssemblyInfoInputs.cache
+C:\myaz201_yazilim\MYAZ201\Appwithdb\Entities\obj\Debug\net7.0\Entities.AssemblyInfo.cs
+C:\myaz201_yazilim\MYAZ201\Appwithdb\Entities\obj\Debug\net7.0\Entities.csproj.CoreCompileInputs.cache
+C:\myaz201_yazilim\MYAZ201\Appwithdb\Entities\obj\Debug\net7.0\Entities.dll
+C:\myaz201_yazilim\MYAZ201\Appwithdb\Entities\obj\Debug\net7.0\refint\Entities.dll
+C:\myaz201_yazilim\MYAZ201\Appwithdb\Entities\obj\Debug\net7.0\Entities.pdb
+C:\myaz201_yazilim\MYAZ201\Appwithdb\Entities\obj\Debug\net7.0\ref\Entities.dll
