@@ -1,0 +1,11 @@
+C:\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\ChatApp\ChatEntities\bin\Debug\net7.0\ChatEntities.deps.json
+C:\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\ChatApp\ChatEntities\bin\Debug\net7.0\ChatEntities.dll
+C:\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\ChatApp\ChatEntities\bin\Debug\net7.0\ChatEntities.pdb
+C:\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\ChatApp\ChatEntities\obj\Debug\net7.0\ChatEntities.GeneratedMSBuildEditorConfig.editorconfig
+C:\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\ChatApp\ChatEntities\obj\Debug\net7.0\ChatEntities.AssemblyInfoInputs.cache
+C:\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\ChatApp\ChatEntities\obj\Debug\net7.0\ChatEntities.AssemblyInfo.cs
+C:\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\ChatApp\ChatEntities\obj\Debug\net7.0\ChatEntities.csproj.CoreCompileInputs.cache
+C:\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\ChatApp\ChatEntities\obj\Debug\net7.0\ChatEntities.dll
+C:\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\ChatApp\ChatEntities\obj\Debug\net7.0\refint\ChatEntities.dll
+C:\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\ChatApp\ChatEntities\obj\Debug\net7.0\ChatEntities.pdb
+C:\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\ChatApp\ChatEntities\obj\Debug\net7.0\ref\ChatEntities.dll

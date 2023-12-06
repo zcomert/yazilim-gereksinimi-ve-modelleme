@@ -1,0 +1,17 @@
+C:\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\ChatApp\ChatRepositories\bin\Debug\net7.0\ChatRepositories.deps.json
+C:\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\ChatApp\ChatRepositories\bin\Debug\net7.0\ChatRepositories.runtimeconfig.json
+C:\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\ChatApp\ChatRepositories\bin\Debug\net7.0\ChatRepositories.dll
+C:\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\ChatApp\ChatRepositories\bin\Debug\net7.0\ChatRepositories.pdb
+C:\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\ChatApp\ChatRepositories\bin\Debug\net7.0\ChatEntities.dll
+C:\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\ChatApp\ChatRepositories\bin\Debug\net7.0\ChatEntities.pdb
+C:\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\ChatApp\ChatRepositories\obj\Debug\net7.0\ChatRepositories.csproj.AssemblyReference.cache
+C:\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\ChatApp\ChatRepositories\obj\Debug\net7.0\ChatRepositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\ChatApp\ChatRepositories\obj\Debug\net7.0\ChatRepositories.AssemblyInfoInputs.cache
+C:\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\ChatApp\ChatRepositories\obj\Debug\net7.0\ChatRepositories.AssemblyInfo.cs
+C:\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\ChatApp\ChatRepositories\obj\Debug\net7.0\ChatRepositories.csproj.CoreCompileInputs.cache
+C:\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\ChatApp\ChatRepositories\obj\Debug\net7.0\ChatRepositories.csproj.CopyComplete
+C:\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\ChatApp\ChatRepositories\obj\Debug\net7.0\ChatRepositories.dll
+C:\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\ChatApp\ChatRepositories\obj\Debug\net7.0\refint\ChatRepositories.dll
+C:\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\ChatApp\ChatRepositories\obj\Debug\net7.0\ChatRepositories.pdb
+C:\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\ChatApp\ChatRepositories\obj\Debug\net7.0\ChatRepositories.genruntimeconfig.cache
+C:\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\ChatApp\ChatRepositories\obj\Debug\net7.0\ref\ChatRepositories.dll
