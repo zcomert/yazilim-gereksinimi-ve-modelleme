@@ -18,6 +18,7 @@ public class ProductsController : ControllerBase
     [HttpGet]
     public IActionResult GetAllProducts()
     {
+        throw new Exception("GetAllProducts booowww!");
         return Ok(_context.Products);
     }
 
