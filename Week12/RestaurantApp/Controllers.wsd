@@ -1,0 +1,19 @@
+@startuml Controllers
+
+class UserController {
+    - repository: UserRepository
+    + GetUser(id: int): IActionResult
+    + Login(email: string, password: string): IActionResult
+    + Register(user: User): IActionResult
+    + Delete(id: int): IActionResult
+}
+
+class ItemController {
+    - repository: ItemRepository
+    + GetAll(): IActionResult
+    + GetOne(id: int): IActionResult
+    + Post(item: Items): IActionResult
+    + Delete(id: int): IActionResult
+}
+
+@enduml

@@ -1,0 +1,39 @@
+@startuml Entities
+class Items {
+    + Id: int
+    + Name: string
+    + Description: string
+    + CategoryId: int
+    + Price: decimal
+
+    + Categories: Categories
+}
+
+class User {
+    + Id: int
+    + Username: string
+    + Email: string
+    + Password: string
+    + Salt: int
+    + User()
+}
+
+class Categories {
+    + Id: int
+    + Name: string
+    + Items: List<Items>
+    + Categories()
+}
+
+class Order {
+    + Id: int
+    + UserId: int
+    + OrderList: List<Items>
+    + OrderDate: DateTime
+}
+
+hide empty fields
+hide empty methods
+left to right direction
+
+@enduml

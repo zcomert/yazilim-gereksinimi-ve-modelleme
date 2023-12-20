@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{F865BD31-DD0C-4702-8C2A-8270524C6FCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositories", "Repositories\Repositories.csproj", "{978947EE-57F5-4BE9-8BF7-3B72051A0E50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantApi", "RestaurantApi\RestaurantApi.csproj", "{F40C5CCF-089A-4CEF-8A12-DEB50D0C545E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F865BD31-DD0C-4702-8C2A-8270524C6FCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F865BD31-DD0C-4702-8C2A-8270524C6FCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F865BD31-DD0C-4702-8C2A-8270524C6FCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F865BD31-DD0C-4702-8C2A-8270524C6FCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{978947EE-57F5-4BE9-8BF7-3B72051A0E50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{978947EE-57F5-4BE9-8BF7-3B72051A0E50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{978947EE-57F5-4BE9-8BF7-3B72051A0E50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{978947EE-57F5-4BE9-8BF7-3B72051A0E50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F40C5CCF-089A-4CEF-8A12-DEB50D0C545E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F40C5CCF-089A-4CEF-8A12-DEB50D0C545E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F40C5CCF-089A-4CEF-8A12-DEB50D0C545E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F40C5CCF-089A-4CEF-8A12-DEB50D0C545E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
