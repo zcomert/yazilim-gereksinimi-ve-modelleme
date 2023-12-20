@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gYdRI32VOYSdeXV88aACfuq+gBe7LJYVm/rXzFocR3cPoY1u3vtXqSw36THLEHlQ3SfQkjLTALtRQ6ky0WE9aQ==",
+  "dgSpecHash": "qzDKNUtThZG/PnKfcp1GEaLDIbQLhBpIqm9SOlKexjUDevFG0CveOpIxAYzUleEMbgTLezG2px0QHfLH9kVkMw==",
   "success": true,
-  "projectFilePath": "C:\\MYAZ203205-Nesne-Yonelimli-Programlama\\Practice\\Week12\\RestaurantApp\\Entities\\Entities.csproj",
+  "projectFilePath": "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\Week12\\RestaurantApp\\Entities\\Entities.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

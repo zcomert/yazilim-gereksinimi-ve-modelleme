@@ -1,6 +1,7 @@
 using Entities;
 using Microsoft.AspNetCore.Mvc;
 using Repositories;
+using Repositories.Services.Exceptions;
 
 [ApiController]
 [Route("api/users")]
@@ -25,15 +26,21 @@ public class UserController : ControllerBase
     {
         var data = repository.GetOne(id);
         if (data is null)
-            return NotFound("Item not found!");
+            throw new NotFoundException(id);
         return Ok(data);
     }
 
     [HttpPost("register")]
-    public IActionResult Register(User item)
+    public IActionResult Register(string username, string email, string password)
     {
-        repository.Post(item);
-        return Created("Item created!", item);
+        var newUser = new User()
+        {
+            Username = username,
+            Email = email,
+            Password = password
+        };
+        repository.Post(newUser);
+        return Created("Item created!", newUser);
     }
 
     [HttpPost("login")]
@@ -41,7 +48,7 @@ public class UserController : ControllerBase
     {
         var user = repository.GetData(email, password);
         if (user is null)
-            return NotFound();
+            throw new BadRequestException();
         return Ok(user);
     }
 }

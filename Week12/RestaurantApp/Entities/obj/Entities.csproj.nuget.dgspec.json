@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\MYAZ203205-Nesne-Yonelimli-Programlama\\Practice\\Week12\\RestaurantApp\\Entities\\Entities.csproj": {}
+    "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\Week12\\RestaurantApp\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "C:\\MYAZ203205-Nesne-Yonelimli-Programlama\\Practice\\Week12\\RestaurantApp\\Entities\\Entities.csproj": {
+    "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\Week12\\RestaurantApp\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\MYAZ203205-Nesne-Yonelimli-Programlama\\Practice\\Week12\\RestaurantApp\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\Week12\\RestaurantApp\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\MYAZ203205-Nesne-Yonelimli-Programlama\\Practice\\Week12\\RestaurantApp\\Entities\\Entities.csproj",
+        "projectPath": "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\Week12\\RestaurantApp\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\PREDATOR\\.nuget\\packages\\",
-        "outputPath": "C:\\MYAZ203205-Nesne-Yonelimli-Programlama\\Practice\\Week12\\RestaurantApp\\Entities\\obj\\",
+        "outputPath": "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\Week12\\RestaurantApp\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PREDATOR\\AppData\\Roaming\\NuGet\\NuGet.Config",

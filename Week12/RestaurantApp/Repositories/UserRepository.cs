@@ -2,6 +2,7 @@
 using Entities;
 using Repositories.Interfaces;
 using Repositories.Services;
+using Repositories.Services.Exceptions;
 
 namespace Repositories;
 
@@ -18,7 +19,7 @@ public class UserRepository : IRepository<User>
     {
         var item = GetOne(id);
         if (item is null)
-            return;
+            throw new NotFoundException(id);
         dbContext.Users.Remove(item);
         dbContext.SaveChanges();
     }
@@ -31,7 +32,7 @@ public class UserRepository : IRepository<User>
     public void Post(User item)
     {
         if (item is null)
-            return;
+            throw new BadRequestException();
 
         var salt = RandomNumberGenerator.GetInt32(10000);
 
@@ -46,12 +47,12 @@ public class UserRepository : IRepository<User>
     {
         var user = dbContext.Users.SingleOrDefault(user => user.Email.Equals(email));
         if (user is null)
-            return null;
+            throw new BadRequestException("Email is wrong!");
 
         var pass = password.Encoder(user.Salt);
 
         if (user.Password.Equals(pass))
             return user;
-        return null;
+        throw new UserBadRequestException(email, password);
     }
 }

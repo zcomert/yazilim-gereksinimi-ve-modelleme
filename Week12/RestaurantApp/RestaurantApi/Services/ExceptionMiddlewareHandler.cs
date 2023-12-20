@@ -1,5 +1,6 @@
 using Entities;
 using Microsoft.AspNetCore.Diagnostics;
+using Repositories.Services.Exceptions;
 
 namespace RestaurantApi.Services;
 
@@ -16,11 +17,16 @@ public static class ExceptionMiddlewareHandler
 
                 if (contextFeature is not null) // bu durumda hata var!
                 {
-                    context.Response.StatusCode = StatusCodes.Status500InternalServerError;
+                    context.Response.StatusCode = contextFeature.Error switch
+                    {
+                        BadRequestException => StatusCodes.Status400BadRequest,
+                        NotFoundException => StatusCodes.Status404NotFound,
+                        InternalServerException => StatusCodes.Status500InternalServerError
+                    };
                     await context.Response.WriteAsync(new ErrorDetail()
                     {
                         StatusCode = context.Response.StatusCode,
-                        Message = "Internal Server Error"
+                        Message = contextFeature.Error.Message
                     }.ToString());
                 }
 

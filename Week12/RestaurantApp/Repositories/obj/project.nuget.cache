@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ruEC2Vn02OQEzXViH0oa0qxVr38flO+y2vdxJo/zEXTlPylM059u+uvfoIkLt2EB6ZW+kKSmgPXG0Q/JI3ys9Q==",
+  "dgSpecHash": "bFLm7O6UQ79lhUxO3LG2iGS/ySvqUa18gDHpFsFRx+8VqBjXODqP4eej/rGo3naJzHqfSAcUyKm4fePCTGaVbg==",
   "success": true,
-  "projectFilePath": "C:\\MYAZ203205-Nesne-Yonelimli-Programlama\\Practice\\Week12\\RestaurantApp\\Repositories\\Repositories.csproj",
+  "projectFilePath": "C:\\MYAZ201-Yazilim-Gereksinimi-ve-Modelleme\\Week12\\RestaurantApp\\Repositories\\Repositories.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PREDATOR\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\PREDATOR\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.0\\microsoft.data.sqlite.core.7.0.0.nupkg.sha512",
