@@ -1,3 +1,4 @@
+using EmployeeApi.Infrastructure.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Repositories;
 
@@ -9,17 +10,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder
-.Services
-.AddDbContext<RepositoryContext>(options =>
-{
-    options.UseSqlite(builder
-    .Configuration
-    .GetConnectionString("sqliteconnection"),
-    prj => prj.MigrationsAssembly("EmployeeApi"));
-});
+builder.Services.ConfigureDatabase(builder.Configuration);
 
-var app = builder.Build();
+
+
+WebApplication? app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -33,5 +28,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.ConfigureExceptionHandler();
 
 app.Run();
