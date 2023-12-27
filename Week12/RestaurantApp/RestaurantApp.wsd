@@ -1,0 +1,59 @@
+@startuml RestaurantApp
+
+class Items {
+}
+
+class User {
+}
+
+class Categories {
+}
+
+class Order {
+}
+
+interface IRepository<T>{
+
+}
+
+class UserRepository{
+    }
+
+class ItemRepository {
+
+}
+
+class CategoriesRepository {
+    }
+
+class StringEncoder{
+}
+
+class UserController {
+}
+
+class ItemController {
+}
+
+hide empty fields
+hide empty methods
+
+left to right direction
+
+User -left- Order
+Items -left- Categories
+CategoriesRepository -up-|> IRepository
+UserRepository -up-|> IRepository
+ItemRepository -up-|> IRepository
+OrderRepository -up-|> IRepository
+
+Categories -up- CategoriesRepository
+User -up- UserRepository
+Order -up- OrderRepository
+Items -up- ItemRepository
+
+UserController -left- UserRepository
+UserRepository -left- StringEncoder
+ItemController -left- ItemRepository
+
+@enduml

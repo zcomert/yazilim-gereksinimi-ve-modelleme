@@ -1,0 +1,44 @@
+@startuml PassApp
+
+class User {
+    + Id: int
+    + Username: string
+    + Email: string
+    + Password: string
+    + Salt: int
+    + User()
+}
+
+interface IRepository<T>{
+    + Check(id: int): T
+    + GetOne(email: string, password: string): T
+    + Post(item: T): void
+    + Delete(id: int): void
+}
+
+class UserRepository{
+    - users: List<User>
+    + UserRepository(users: List<User>)
+}
+
+class StringEncoder{
+    + Encoder(password: string, number: int): string
+}
+
+class UserController {
+    - repository: UserRepository
+    + GetUser(id: int): User
+    + Login(email: string, password: string): User
+    + Register(user: User): void
+    + Delete(id: int): void
+}
+
+hide empty fields
+hide empty methods
+
+UserController -left-> ControllerBase
+UserRepository -left- StringEncoder
+UserRepository -up-> IRepository
+
+
+@enduml
