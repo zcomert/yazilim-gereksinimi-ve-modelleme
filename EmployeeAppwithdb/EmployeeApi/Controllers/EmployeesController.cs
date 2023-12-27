@@ -16,10 +16,64 @@ public class EmployeesController : ControllerBase
         _context = context;
     }
     [HttpGet]
-    public IActionResult GetAllEmployees()
+    public IActionResult GetAllEmployees([FromQuery(Name ="q")] string q="")
     {
-        var employees = _context.Employees.ToList();
+        List<Employee> employees;
+        
+        if(string.IsNullOrWhiteSpace(q))
+            employees = _context.Employees.ToList();
+        else
+            employees = _context
+                .Employees
+                .Where(emp => emp.FirstName.ToLower().Contains(q))
+                .ToList();
+                
         return Ok(employees);
+    }
+
+    [HttpGet("orderbyname")]
+    public IActionResult GetAllEmployeesOrderByFirstName()
+    {
+        var employees = _context
+        .Employees
+        .OrderBy(emp => emp.FirstName)
+        .ThenBy(emp => emp.LastName)
+        .ToList();
+        
+        return Ok(employees);
+    }
+    
+    // filter/?min=a&max=b
+
+    [HttpGet("filter")]
+    public IActionResult Filter([FromQuery(Name ="min")] decimal min, 
+        [FromQuery(Name ="max")]decimal max)
+    {
+
+        // var employees = new List<Employee>();
+
+        // foreach (var item in _context.Employees.ToList())
+        // {
+        //     if(item.Salary>=min && item.Salary<=max)
+        //     {
+        //         employees.Add(item);
+        //     }
+        // }
+        // return Ok(employees);
+
+        var model = _context
+            .Employees
+            .Where(c => c.Salary>=min && c.Salary<=max)
+            .ToList();
+
+        return Ok(model);
+    }
+
+
+    [HttpGet("search")]
+    public IActionResult GetAllEmployeesWithSearchTerm([FromQuery(Name ="q")] string q)
+    {
+        return Ok("Selam caniimm...");
     }
 
     [HttpGet("{id:int}")]
