@@ -10,8 +10,8 @@ using Repositories;
 namespace ProductApi.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    [Migration("20231129083933_init")]
-    partial class init
+    [Migration("20231227122826_Start")]
+    partial class Start
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,8 +25,8 @@ namespace ProductApi.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Price")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("ProductName")
                         .HasColumnType("TEXT");
@@ -39,25 +39,25 @@ namespace ProductApi.Migrations
                         new
                         {
                             ProductId = 1,
-                            Price = 30000m,
+                            Price = 30000,
                             ProductName = "Computer"
                         },
                         new
                         {
                             ProductId = 2,
-                            Price = 1000m,
+                            Price = 1000,
                             ProductName = "Mouse"
                         },
                         new
                         {
                             ProductId = 3,
-                            Price = 2000m,
+                            Price = 2000,
                             ProductName = "Keyboard"
                         },
                         new
                         {
                             ProductId = 4,
-                            Price = 3000m,
+                            Price = 3000,
                             ProductName = "Webcam"
                         });
                 });

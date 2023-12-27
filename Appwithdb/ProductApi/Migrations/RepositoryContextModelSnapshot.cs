@@ -22,8 +22,8 @@ namespace ProductApi.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Price")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("ProductName")
                         .HasColumnType("TEXT");
@@ -36,25 +36,25 @@ namespace ProductApi.Migrations
                         new
                         {
                             ProductId = 1,
-                            Price = 30000m,
+                            Price = 30000,
                             ProductName = "Computer"
                         },
                         new
                         {
                             ProductId = 2,
-                            Price = 1000m,
+                            Price = 1000,
                             ProductName = "Mouse"
                         },
                         new
                         {
                             ProductId = 3,
-                            Price = 2000m,
+                            Price = 2000,
                             ProductName = "Keyboard"
                         },
                         new
                         {
                             ProductId = 4,
-                            Price = 3000m,
+                            Price = 3000,
                             ProductName = "Webcam"
                         });
                 });

@@ -17,6 +17,43 @@ public class ProductsController : ControllerBase
         _context = context;
     }
 
+    // api/products/orderbyproductname
+    [HttpGet("orderbyproductname")]
+    public IActionResult OrderByProductName()
+    {
+
+        // var list = _context.Products.ToList();
+        // list.Sort();
+
+        // // dot per line
+        // return Ok(list);
+        
+        var model = _context
+            .Products
+            .OrderBy(prd => prd.ProductName)
+            .ToList();
+        return Ok(model);
+    }
+
+    // api/products/orderbyprice?direction=asc
+    [HttpGet("orderbyprice")]
+    public IActionResult OrderByPrice([FromQuery(Name ="direction")] string direction="asc")
+    {
+        var model = new List<Product>();
+        switch (direction)
+        {
+            case "asc":
+                model = _context.Products.OrderBy(p => p.Price).ToList();
+                break;
+            case "desc":
+                model = _context.Products.OrderByDescending(p => p.Price).ToList();
+                break;
+            default:
+                return BadRequest(); // 400
+        }
+        return Ok(model);
+    }
+
     [HttpGet] // api/products?min=300&max=500
     public IActionResult GetAllProducts([FromQuery] ProductRequestParameters p)
     {

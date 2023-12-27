@@ -7,7 +7,7 @@
 namespace ProductApi.Migrations
 {
     /// <inheritdoc />
-    public partial class init : Migration
+    public partial class Start : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -19,7 +19,7 @@ namespace ProductApi.Migrations
                     ProductId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     ProductName = table.Column<string>(type: "TEXT", nullable: true),
-                    Price = table.Column<decimal>(type: "TEXT", nullable: false)
+                    Price = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -31,10 +31,10 @@ namespace ProductApi.Migrations
                 columns: new[] { "ProductId", "Price", "ProductName" },
                 values: new object[,]
                 {
-                    { 1, 30000m, "Computer" },
-                    { 2, 1000m, "Mouse" },
-                    { 3, 2000m, "Keyboard" },
-                    { 4, 3000m, "Webcam" }
+                    { 1, 30000, "Computer" },
+                    { 2, 1000, "Mouse" },
+                    { 3, 2000, "Keyboard" },
+                    { 4, 3000, "Webcam" }
                 });
         }
 
