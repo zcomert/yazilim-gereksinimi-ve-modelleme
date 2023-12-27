@@ -1,0 +1,18 @@
+@startuml ExceptionModel
+title "Exception Model"
+class Exception{
+    +Exception(messsage:string)
+}
+
+abstract class NotFoundException{
+    +NotFoundException(message:string)
+}
+
+class EmployeeNotFoundException{
+    +EmployeeNotFoundException(message:string)
+}
+
+NotFoundException -u-> Exception : "extends"
+EmployeeNotFoundException -u-> NotFoundException : "extends"
+hide empty members
+@enduml

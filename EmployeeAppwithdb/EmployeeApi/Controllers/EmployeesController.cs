@@ -1,3 +1,4 @@
+using Entities.Exceptions;
 using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 using Repositories;
@@ -17,9 +18,21 @@ public class EmployeesController : ControllerBase
     [HttpGet]
     public IActionResult GetAllEmployees()
     {
-        throw new Exception("BOOOMMM!");
         var employees = _context.Employees.ToList();
         return Ok(employees);
+    }
+
+    [HttpGet("{id:int}")]
+    public IActionResult GetOneEmployee([FromRoute(Name ="id")] int id)
+    {
+        var employee = _context
+        .Employees
+        .SingleOrDefault(e => e.EmployeeId.Equals(id));
+
+        if(employee is null)
+            throw new EmployeeNotFoundException(id); // 404
+        
+        return Ok(employee); // 200
     }
 
     [HttpDelete("{id:int}")]
