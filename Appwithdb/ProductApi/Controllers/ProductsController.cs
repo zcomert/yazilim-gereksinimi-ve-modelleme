@@ -1,4 +1,6 @@
+using Entities.Exceptions;
 using Entities.Models;
+using Entities.RequestParameters;
 using Microsoft.AspNetCore.Mvc;
 using Repositories;
 
@@ -15,19 +17,39 @@ public class ProductsController : ControllerBase
         _context = context;
     }
 
-    [HttpGet]
-    public IActionResult GetAllProducts()
+    [HttpGet] // api/products?min=300&max=500
+    public IActionResult GetAllProducts([FromQuery] ProductRequestParameters p)
     {
-        throw new Exception("GetAllProducts booowww!");
-        return Ok(_context.Products);
+        List<Product> model;
+        if(p.Min.Equals(0) && p.Max.Equals(0))
+            model = _context
+                .Products
+                .ToList();
+        else
+            
+            model = p.IsValid 
+                ? _context
+                    .Products
+                    .Where(prd => prd.Price>=p.Min && prd.Price<p.Max)
+                    .ToList()
+                : _context.Products.ToList();
+            
+            
+
+        return Ok(model);
     }
 
     [HttpGet("{id:int}")]
     public IActionResult GetOneProduct([FromRoute(Name = "id")] int id)
     {
-        return Ok(_context
+        var model = _context
         .Products
-        .SingleOrDefault(p => p.ProductId.Equals(id)));
+        .SingleOrDefault(p => p.ProductId.Equals(id));
+
+        if(model is null)
+            throw new ProductNotFoundException(id);
+        
+        return Ok(model);
     }
 
     [HttpDelete("{id:int}")]
@@ -59,6 +81,6 @@ public class ProductsController : ControllerBase
     {
         _context.Products.Add(product);
         _context.SaveChanges();
-        return NoContent();
+        return Created($"/api/products/{product.ProductId}",product); // 201
     }
 }

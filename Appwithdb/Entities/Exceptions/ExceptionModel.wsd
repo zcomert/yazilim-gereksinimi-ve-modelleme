@@ -1,0 +1,22 @@
+@startuml ExceptionModel
+title "Exception Model"
+
+class Exception{
+    +Exception(message:string)
+}
+
+abstract class NotFoundException
+{
+    +NotFoundException(message:string)
+}
+
+class ProductNotFoundException
+{
+    ProductNotFoundException(id:int)
+}
+
+Exception <-down- NotFoundException : "extends"
+NotFoundException <-down- ProductNotFoundException : "extends"
+
+hide empty members
+@enduml
