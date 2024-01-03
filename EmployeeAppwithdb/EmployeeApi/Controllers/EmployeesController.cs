@@ -15,6 +15,20 @@ public class EmployeesController : ControllerBase
     {
         _context = context;
     }
+
+    [HttpPost("addmultiple")]
+    public IActionResult CreateAllEmployees([FromBody] List<Employee> employees)
+    {
+        // _context.Employees.AddRange(employees);
+        foreach (Employee employee in employees)
+        {
+            _context.Employees.Add(employee);
+        }
+        _context.SaveChanges();
+        return Created("/api/employees",employees); // 201 Created
+    }
+
+
     [HttpGet]
     public IActionResult GetAllEmployees([FromQuery(Name ="q")] string q="")
     {
@@ -86,7 +100,14 @@ public class EmployeesController : ControllerBase
         if(employee is null)
             throw new EmployeeNotFoundException(id); // 404
         
-        return Ok(employee); // 200
+        return Ok(new {
+            firstName = employee.FirstName,
+            lastName = employee.LastName,
+            salary = employee.Salary,
+            gender = employee.Gender 
+                    ? "Bay"
+                    : "Bayan"
+        }); // 200
     }
 
     [HttpDelete("{id:int}")]
@@ -107,7 +128,7 @@ public class EmployeesController : ControllerBase
     {
         _context.Employees.Add(employee);
         _context.SaveChanges();
-        return NoContent(); // 204
+        return Created($"api/employees/{employee.EmployeeId}",employee); // 201
     }
 
     [HttpPut("{id:int}")]
@@ -122,9 +143,30 @@ public class EmployeesController : ControllerBase
             emp.FirstName = employee.FirstName;
             emp.LastName = employee.LastName;
             emp.Salary = employee.Salary;
+            emp.Gender = employee.Gender;
 
             _context.SaveChanges();
         }
         return NoContent(); // 204
+    }
+
+    [HttpPut("increase/{rate}")] // api/employees/increate/{rate}
+    public IActionResult IncreateSalary([FromRoute(Name ="rate")] decimal rate)
+    {
+        _context
+            .Employees
+            .ToList()
+            .ForEach(e => e.Salary = e.Salary + e.Salary*rate/100);
+        
+        _context.SaveChanges();
+        return Ok(_context.Employees);
+        
+        // var employees = _context.Employees.ToList();
+        // foreach (var employee in employees)
+        // {
+        //     employee.Salary = employee.Salary + (employee.Salary * (rate/100));
+        // }
+        // _context.SaveChanges();
+        // return Ok(employees);
     }
 }
