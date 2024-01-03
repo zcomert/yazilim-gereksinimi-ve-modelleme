@@ -93,6 +93,10 @@ public class ProductsController : ControllerBase
     public IActionResult DeleteOneProduct([FromRoute(Name = "id")] int id)
     {
         var entity = _context.Products.SingleOrDefault(p => p.ProductId.Equals(id));
+        
+        if(entity is null)
+            throw new ProductNotFoundException(id);
+        
         _context.Products.Remove(entity);
         _context.SaveChanges();
         return NoContent();
@@ -119,5 +123,33 @@ public class ProductsController : ControllerBase
         _context.Products.Add(product);
         _context.SaveChanges();
         return Created($"/api/products/{product.ProductId}",product); // 201
+    }
+
+    [HttpPost("createall")]
+    public IActionResult CreateAll([FromBody] List<Product> products)
+    {
+        // ürünleri dolaş ve ekle 
+        // _context.Products.AddRange(products);
+        foreach (var product in products)
+        {
+            _context.Products.Add(product);
+        }
+        
+        // Kayıtları kalıcı hale getir
+        _context.SaveChanges();
+        
+        return Created("api/products", products);
+    }
+
+    [HttpPut("changeprice/{rate}")] // api/products/changeprice
+    public IActionResult UpdateAllPrice([FromRoute(Name ="rate")] decimal rate)
+    {
+        var products = _context.Products.ToList();
+        foreach (var product in products)
+        {
+            product.Price += (int)(product.Price * (rate/100));
+        }
+        _context.SaveChanges();
+        return NoContent();
     }
 }
